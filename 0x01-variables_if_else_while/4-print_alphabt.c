@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - Prints some letters of alphabet
  *
@@ -17,7 +16,7 @@ int main(void)
 		}
 	}
 
-        putchar('\n');
+	putchar('\n');
 
 	return (0);
 }
