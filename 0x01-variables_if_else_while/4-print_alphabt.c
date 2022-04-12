@@ -13,9 +13,7 @@ int main(void)
 	{
 		if (c != 'e' && c != 'q')
 		{
-
-			putchar(c);	
-
+			putchar(c);
 		}
 	}
 
@@ -23,3 +21,4 @@ int main(void)
 
 	return (0);
 }
+
