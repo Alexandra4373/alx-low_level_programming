@@ -1,30 +1,21 @@
-i#include <stdio.h>
-
+#include <stdio.h>
 /**
- * main - Entry point
+ * main - print first 50 fibonacci
  *
- * Description: Calculates first 50 Fibonacci numbers
- *
- * Return: Always 0 (success)
+ * Return: 0 always.
  */
 int main(void)
 {
-	int count;
-	unsigned long fib1 = 0, fib2 = 1, sum;
-
-	for (count = 0; count < 50; count++)
-	{
-		sum = fib1 + fib2;
-		printf("%lu", sum);
-
-		fib1 = fib2;
-		fib2 = sum;
-
-		if (count == 49)
-			printf("\n");
-		else
-			printf(", ");
-        }
-
-	return (0);
+long int i, x = 1, y = 2, sum = 0;
+for (i = 0; i < 49; i++)
+{
+printf("%ld, ", x);
+sum = x + y;
+x = y;
+y = sum;
+if (i == 48)
+printf("%ld\n", x);
 }
+return (0);
+}
+
