@@ -9,21 +9,25 @@
  * Return: pointer to the resulting string
  */
 char *_strncpy(char *dest, char *src, int n)
-{		
-	int i;
+{
+	int i = 0, k = 0;
 
-	i = 0;
-
-	while (src[i] != '\0' && i < n)
+	while (n > k)
 	{
-		dest[i] = src[i];
-		i++;
-	}
-
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;							
+		if (src[k] == '\0')
+		{
+			for (; k < n; k++)
+			{
+				dest[i] = '\0';
+				i++;
+			}
+		}
+		else
+		{
+			dest[i] = src[k];
+			k++;
+			i++;
+		}
 	}
 
 	return (dest);
