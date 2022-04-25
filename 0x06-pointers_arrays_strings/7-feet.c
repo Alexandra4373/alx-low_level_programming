@@ -1,12 +1,10 @@
 #include "main.h"
 
 /**
- *  * leet - Function that reverses the content of an array of integers.
- *   *
- *    * @str: s is the array
- *     *
- *      * Return: Always 0.
- *       */
+ *leet - encodes a string into 1337.
+ *@s: string to encode.
+ *Return: the encoded string.
+ */
 
 char *leet(char *s)
 {
