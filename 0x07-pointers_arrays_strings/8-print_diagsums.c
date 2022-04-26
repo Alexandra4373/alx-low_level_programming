@@ -8,19 +8,9 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i;
-	int tl = 0;
-	int tr = 0;
-	int s = size * size;
+	int i, j, sum1 = 0, sum2 = 0;
 
-	for (i = 0; i < s; i += size + 1)
-	{							
-		tl += a[i];
-	}
-
-	for (i = size - 1; i < s - 1; i += size - 1)
-	{
-		tr += a[i];					
-	}
-	printf("%d, %d\n", tl, tr);
+	for (j = 0, i = size - 1; j < (size * size); j += size + 1, i += size - 1)
+		sum1 += a[j], sum2 += a[i];
+	printf("%d, %d\n", sum1, sum2);
 }
