@@ -1,11 +1,9 @@
-table File  52 lines (49 sloc)  851 Bytes
 #include "variadic_functions.h"
 
 /**
  * print_strings - print strings with given separator
  * @separator: delimiter
  * @n: number of arguments passed
- *
  * Return: void function
  */
 void print_strings(const char *separator, const unsigned int n, ...)
