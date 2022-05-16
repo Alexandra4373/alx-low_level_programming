@@ -1,11 +1,11 @@
 #include "variadic_functions.h"
 
 /**
- *  * print_all - print everything
- *   * @format: format
- *    *
- *     * Return: void function
- *      */
+ * print_all - print everything
+ * @format: format
+ *
+ * Return: void function
+ */
 void print_all(const char * const format, ...)
 {
 	va_list valist;
