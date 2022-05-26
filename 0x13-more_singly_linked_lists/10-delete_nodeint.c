@@ -7,34 +7,31 @@
  *
  * Return: int
  */
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *new, *copy = *head;
+	listint_t *tmp, *copy = *head;
 	unsigned int node;
 
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
-		return (NULL);
+	if (copy == NULL)
+		return (-1);
 
-	new->n = n;
-
-	if (idx == 0)
+	if (index == 0)
 	{
-		new->next = copy;
-		*head = new;
-		return (new);
+		*head = (*head)->next;
+		free(copy);
+		return (1);
 	}
 
-	for (node = 0; node < (idx - 1); node++)
+	for (node = 0; node < (index - 1); node++)
 	{
-		if (copy == NULL || copy->next == NULL)
-			return (NULL);
+		if (copy->next == NULL)
+			return (-1);
 
 		copy = copy->next;
 	}
 
-	new->next = copy->next;
-	copy->next = new;
-
-	return (new);
+	tmp = copy->next;
+	copy->next = tmp->next;
+	free(tmp);
+	return (1);
 }
