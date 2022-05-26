@@ -10,32 +10,29 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *i, *j;
+	listint_t *a, *b;
 
 	if (head == NULL || head->next == NULL)
 		return (NULL);
 
-	i = head->next;
-	j = (head->next)->next;
+	a = head->next;
+	b = (head->next)->next;
 
-	while (j)
+	while (b)
 	{
-		if (i == j)
+		if (a == b)
 		{
-			i = head;
+			a = b;
 
-			while (i != j)
+			while (a != b)
 			{
-				i = i->next;
-				j = j->next;
+				a = a->next;
+				b = b->next;
 			}
 
-			return (i);
+			return (a);
 		}
 
-		i = i->next;
-		j = (j->next)->next;
+		a = a->next;
+		b= (b->next)->next;
 	}
-
-	return (NULL);
-}
