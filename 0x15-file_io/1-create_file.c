@@ -1,31 +1,3 @@
-
-Search or jump to…
-Pulls
-Issues
-Marketplace
-Explore
- 
-@Ayomidegideon123 
-Alexandra4373
-/
-alx-low_level_programming
-Public
-Code
-Issues
-Pull requests
-1
-Actions
-Projects
-Security
-Insights
-alx-low_level_programming/0x15-file_io/1-create_file.c
-@Alexandra4373
-Alexandra4373 task 1
-Latest commit a908999 on May 30
- History
- 1 contributor
-49 lines (43 sloc)  770 Bytes
-
 #include "main.h"
 
 /**
@@ -75,3 +47,5 @@ int _strlen(char *s)
 	}
 	return (output);
 }
+
+
