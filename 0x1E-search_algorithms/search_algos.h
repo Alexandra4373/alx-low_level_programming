@@ -5,6 +5,34 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+/**
+ * struct listint_s - singly linked list
+ *
+ * @n: Integer
+ * @index: Index of the node in the list
+ * @next: Pointer to the next node
+ *
+ * Description: singly linked list node structure
+ * for Holberton project
+ */
+typedef struct listint_s
+{
+        int n;
+        size_t index;
+	struct listint_s *next;
+} listint_t;
+
+
+typedef struct skiplist_s
+{
+        int n;
+        size_t index;
+	struct skiplist_s *next;
+	struct skiplist_s *express;
+} skiplist_t;
+
+/** Prototypes **/
+
 int linear_search(int *array, size_t size, int value);
 int binary_search(int *array, size_t size, int value);
 int help_binary(int *array, int value, size_t lo, size_t hi);
